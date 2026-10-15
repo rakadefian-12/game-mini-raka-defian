@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>PAHLAWAN SIBER: Petualangan Menyelamatkan Dunia Digital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-m="menu">
+  <div id="stage">
+    <canvas id="c"></canvas>
+    <div id="hud">
+      <span id="hS">⭐ 0</span><span id="hC">🪙 0</span><span id="hL"></span><span id="hSh">🛡️ 0</span>
+      <span id="hN"></span><button data-a="mute" aria-label="Musik nyala atau mati">🔊</button><button data-a="pause" aria-label="Jeda">⏸</button>
+      <i id="bar"><b></b></i>
+    </div>
+    <div id="toast"></div>
+  </div>
+
+  <div id="pad">
+    <div><button data-k="L">◀</button><button data-k="R">▶</button></div>
+    <div><button data-k="A" class="sh">🛡️</button><button data-k="J" class="jp">⬆</button></div>
+  </div>
+
+  <section class="scr on" id="menu">
+    <canvas id="hero" width="160" height="160"></canvas>
+    <h1>PAHLAWAN SIBER</h1>
+    <p class="sub">Petualangan Menyelamatkan Dunia Digital</p>
+    <p class="rot">📱 Putar ponselmu ke mode landscape agar lebih seru!</p>
+    <div class="row">
+      <button class="b" data-a="start">MULAI PETUALANGAN</button>
+      <button class="b p" data-a="how">CARA BERMAIN</button>
+      <button class="b g" data-a="levels">PILIH LEVEL</button>
+      <button class="b p" data-a="mute" aria-label="Musik nyala atau mati">🔊</button>
+    </div>
+  </section>
+
+  <section class="scr" id="how">
+    <h2>Cara Bermain</h2>
+    <ul>
+      <li>🎯 Selamatkan teman dari <b>Monster Bully</b> dan masuk ke portal di ujung level.</li>
+      <li>⌨️ <b>A / D</b> atau panah: bergerak. <b>Spasi</b> atau panah atas: lompat (tahan untuk lompat lebih tinggi).</li>
+      <li>🛡️ Ambil <b>Perisai Kebaikan</b>, lalu tekan <b>E</b> / <b>Shift</b> / tombol 🛡️. Kamu kebal dan bisa menghancurkan komentar jahat dan monster.</li>
+      <li>👟 Lompat di atas kepala monster untuk mengalahkannya. Hindari komentar jahat di tanah dan jangan jatuh ke jurang.</li>
+      <li>⏸ <b>P</b> atau <b>Esc</b>: jeda. Di ponsel, putar ke mode landscape agar lebih seru.</li>
+    </ul>
+    <button class="b" data-a="back">KEMBALI</button>
+  </section>
+
+  <section class="scr" id="levels">
+    <h2>Pilih Level</h2>
+    <div id="lvl" class="row"></div>
+    <button class="b p" data-a="back">KEMBALI</button>
+  </section>
+
+  <section class="scr" id="pause">
+    <h2>Permainan Dijeda</h2>
+    <div class="row">
+      <button class="b" data-a="resume">LANJUT</button>
+      <button class="b g" data-a="restart">ULANGI LEVEL</button>
+      <button class="b p" data-a="levels">PILIH LEVEL</button>
+      <button class="b p" data-a="menu">MENU UTAMA</button>
+      <button class="b g" data-a="mute" aria-label="Musik nyala atau mati">🔊</button>
+    </div>
+  </section>
+
+  <section class="scr" id="over">
+    <h2>Yah, nyawamu habis! 💔</h2>
+    <p>Pahlawan tidak menyerah. Coba lagi, kamu pasti bisa!</p>
+    <div class="row">
+      <button class="b" data-a="restart">COBA LAGI</button>
+      <button class="b p" data-a="levels">PILIH LEVEL</button>
+    </div>
+  </section>
+
+  <section class="scr" id="done">
+    <h2>Level Selesai! 🎉</h2>
+    <p id="dT"></p>
+    <p id="dS" class="big"></p>
+    <div class="row">
+      <button class="b" data-a="next">LEVEL BERIKUTNYA</button>
+      <button class="b g" data-a="restart">MAIN LAGI</button>
+      <button class="b p" data-a="levels">PILIH LEVEL</button>
+    </div>
+  </section>
+
+  <section class="scr" id="win">
+    <h2>🏆 Dunia Digital Ceria Kembali! 🏆</h2>
+    <p>Jadilah pahlawan digital: berani berbuat baik dan membantu teman!</p>
+    <p id="wS" class="big"></p>
+    <div id="bd" class="row"></div>
+    <div class="row">
+      <button class="b" data-a="start">MAIN LAGI</button>
+      <button class="b p" data-a="levels">PILIH LEVEL</button>
+    </div>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
